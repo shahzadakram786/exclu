@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
+import { Eye, EyeOff } from "lucide-react"
 
 export default function SignupPage() {
   const [username, setUsername] = useState("")
@@ -19,6 +20,7 @@ export default function SignupPage() {
   const [acceptTerms, setAcceptTerms] = useState(false)
   const [error, setError] = useState("")
   const [success, setSuccess] = useState(false)
+  const [showPassword, setShowPassword] = useState(false)
   const { signup } = useAuth()
   const router = useRouter()
 
@@ -106,7 +108,6 @@ export default function SignupPage() {
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSignup} className="space-y-4">
-              {/* Added error display */}
               {error && <div className="text-red-400 text-sm text-center">{error}</div>}
 
               <div className="space-y-2">
@@ -143,15 +144,24 @@ export default function SignupPage() {
                 <Label htmlFor="password" className="text-gray-300">
                   Password
                 </Label>
-                <Input
-                  id="password"
-                  type="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="bg-gray-800 border-gray-700 text-white placeholder-gray-500"
-                  required
-                />
+                <div className="relative">
+                  <Input
+                    id="password"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 pr-10"
+                    required
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                  >
+                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                  </button>
+                </div>
               </div>
 
               <div className="space-y-2">
