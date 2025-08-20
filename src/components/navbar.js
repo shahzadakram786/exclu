@@ -24,28 +24,27 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-white border-b">
-      <div className="flex items-center">
-        <Link href="/" className="flex items-center space-x-2">
+    <nav className="flex items-center justify-between px-6 py-4 bg-white border-b  ">
+      <div className="flex items-center space-x-10">
+        <Link href="#" className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
             <span className="text-white font-bold text-sm">©</span>
           </div>
           <span className="font-semibold text-xl">exclu</span>
         </Link>
-      </div>
 
-      <div className="hidden md:flex items-center space-x-8">
-        <Link href="/pricing" className="text-gray-600 hover:text-gray-900">
-          Pricing
-        </Link>
-        <Link href="/faqs" className="text-gray-600 hover:text-gray-900">
-          FAQs
-        </Link>
-        <Link href="/testimonials" className="text-gray-600 hover:text-gray-900">
-          Testimonials
-        </Link>
-      </div>
-
+     <div className="hidden md:flex items-center space-x-8">
+  <Link href="#pricing" className="text-gray-600 hover:text-gray-900">
+    Pricing
+  </Link>
+  <Link href="#faqs" className="text-gray-600 hover:text-gray-900">
+    FAQs
+  </Link>
+  <Link href="#testimonials" className="text-gray-600 hover:text-gray-900">
+    Testimonials
+  </Link>
+</div>
+ </div>
       <div className="flex items-center space-x-4">
         {isAuthenticated ? (
           <DropdownMenu>
