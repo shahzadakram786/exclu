@@ -2,14 +2,16 @@
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import AboutHero from "./abouthero";
 
 const HeroSection = () => {
   return (
     <section
       id="hero"
-      className=" flex flex-col md:flex-row items-center justify-between bg-black  text-white"
+      className="  bg-black  text-white"
     >
-      <div className="w-full md:w-1/2 flex flex-col gap-2">
+      <div className="flex flex-col md:flex-row items-center justify-between">
+         <div className="w-full md:w-1/2 flex flex-col gap-2">
         <h1 className="text-5xl font-bold leading-tight">
           Your Link,<br />Your Business
         </h1>
@@ -36,6 +38,9 @@ const HeroSection = () => {
           className="max-w-md w-full rounded-lg"
         />
       </div>
+      </div>
+     
+      <AboutHero/>
     </section>
   );
 };
