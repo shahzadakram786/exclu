@@ -1,7 +1,7 @@
 import { Upload } from "lucide-react";
 import React from "react";
 
-const AboutHero = () => {
+const StepsOne = () => {
   const steps = [
     {
       title: "Import your content",
@@ -15,6 +15,21 @@ const AboutHero = () => {
     {
       title: "Gain your time",
       description: "Let your team manage your library",
+    },
+  ];
+  const steps1 = [
+    {
+      title: "set your price",
+      description:
+        "Choose how much your content costs, how long it's available",
+    },
+    {
+      title: "Sell to your fans",
+      description: "Share your links directly across all your social meddia with just one click ",
+    },
+    {
+      title: "Add your links to your bio",
+      description: "Make your content easily accessible right from your bio",
     },
   ];
 
@@ -61,23 +76,5 @@ const AboutHero = () => {
   );
 };
 
-export default AboutHero;
+export default StepsOne;
 
-
-  {/* <div className="flex  items-center w-full  justify-between">
- <div className="flex justify-center items-center w-full">
-      <h2 className="text-3xl font-semibold">What People Say</h2>
- 
-      </div>
-    <div className="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
-        <video
-          src="/videos/vid3.mov" 
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="max-w-70  rounded-lg"
-        />
-      </div>
-     
-  </div> */}

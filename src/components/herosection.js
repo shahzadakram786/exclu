@@ -2,7 +2,8 @@
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import AboutHero from "./abouthero";
+import StepsOne from "./stepone";
+import StepsTwo from "./steptwo";
 
 const HeroSection = () => {
   return (
@@ -15,8 +16,6 @@ const HeroSection = () => {
         <h1 className="text-5xl font-bold leading-tight">
           Your Link,<br />Your Business
         </h1>
-    
-        
         <div className="flex items-center  bg-[#4b4b4b] rounded-lg h-15  w-full ">
           <Input
             type="text"
@@ -40,7 +39,8 @@ const HeroSection = () => {
       </div>
       </div>
      
-      <AboutHero/>
+      <StepsOne/>
+      <StepsTwo/>
     </section>
   );
 };
