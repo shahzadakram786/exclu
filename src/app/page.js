@@ -1,25 +1,23 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+
+import FaqsSection from "@/components/faqssection"
+import HeroSection from "@/components/herosection"
 import Navbar from "@/components/navbar"
+import PricingSection from "@/components/pricingsection"
+import TestimonialsSection from "@/components/testimonialsection"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
-      <main className="container mx-auto px-6 py-12">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to exclu</h1>
-          <p className="text-xl text-gray-600 mb-8">More sales. More control. 0% fees.</p>
-          <div className="flex justify-center space-x-4">
-            <Button className="bg-black text-white hover:bg-gray-800" asChild>
-              <Link href="/signup">Get Started</Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <Link href="/login">Login</Link>
-            </Button>
-          </div>
-        </div>
-      </main>
+    <div className="min-h-screen bg-[#000000] z-50">
+      <div className="sticky top-0 w-full z-50">
+         <Navbar />
+      </div>
+      <div className="p-8">
+      <HeroSection />
+     <TestimonialsSection />
+      <PricingSection />
+      <FaqsSection />
+      </div>
+      
     </div>
   )
 }

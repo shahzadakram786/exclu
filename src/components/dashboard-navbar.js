@@ -40,7 +40,7 @@ export default function DashboardNavbar({ userRole }) {
         </Link>
         {userRole === "creator" && (
           <>
-                <Link href="/dashboard/agency/content" className="text-gray-600 hover:text-gray-900">
+              <Link href="/dashboard/agency/content" className="text-gray-600 hover:text-gray-900">
               Content
             </Link>
             <Link href="/dashboard/agency/payment" className="text-gray-600 hover:text-gray-900">

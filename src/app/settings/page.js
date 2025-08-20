@@ -52,7 +52,6 @@ export default function SettingsPage() {
       await updateProfile(updatedData)
       setMessage("Profile updated successfully!")
 
-      // Redirect back to dashboard after successful update
       setTimeout(() => {
         router.push(`/dashboard/${user?.role}`)
       }, 1500)
