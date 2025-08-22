@@ -40,7 +40,7 @@ export default function DashboardNavbar({ userRole }) {
         </Link>
         {userRole === "creator" && (
           <>
-              <Link href="/dashboard/agency/content" className="text-gray-600 hover:text-gray-900">
+            <Link href="/dashboard/agency/content" className="text-gray-600 hover:text-gray-900">
               Content
             </Link>
             <Link href="/dashboard/agency/payment" className="text-gray-600 hover:text-gray-900">
@@ -56,7 +56,7 @@ export default function DashboardNavbar({ userRole }) {
               Agency
             </Link>
             <Link href="/dashboard/agency/creator-request" className="text-gray-600 hover:text-gray-900">
-              Creator 
+              Creator
             </Link>
             <button className=" hover:border-black hover:border hover:bg-white hover:text-black transition 4s pointer  bg-black text-lg text-white px-4 py-2 rounded-full">
               <Link href="/dashboard/agency/refer-friends" className="">
